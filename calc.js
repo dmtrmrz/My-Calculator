@@ -16,9 +16,14 @@ function clearAll() {
   out.textContent = 0;
 }
 
-document.querySelector(".ac").onclick = clearAll;
+// document.querySelector(".ac").onclick = clearAll;
+const as = document.querySelector(".ac");
+as.addEventListener("click", clearAll);
 
-document.querySelector(".buttons").onclick = (e) => {
+const buttons = document.querySelector(".buttons");
+buttons.addEventListener("click", calculations);
+
+function calculations(e) {
   if (!e.target.classList.contains("btn")) return;
   if (e.target.classList.contains("ac")) return;
 
@@ -111,4 +116,4 @@ document.querySelector(".buttons").onclick = (e) => {
       out.textContent = 0;
     }
   }
-};
+}
