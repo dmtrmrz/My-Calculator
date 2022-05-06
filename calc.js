@@ -97,8 +97,9 @@ document.querySelector(".buttons").onclick = (e) => {
       b = b.substring(0, b.length - 1);
       finish = true;
       out.textContent = a + sign + b;
+      console.log(b.length);
     } else if (sign !== "") {
-      sign === "";
+      sign = "";
       finish = true;
       out.textContent = a;
     } else if (a.length > 0) {
